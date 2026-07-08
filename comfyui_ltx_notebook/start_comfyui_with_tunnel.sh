@@ -27,7 +27,7 @@ echo $COMFY_PID > /tmp/comfyui.pid
 sleep 3
 
 # Download latest radeon-tunnel client
-echo "[tunnel] downloading radeon-tunnel client from ${TUNNEL_SERVER}"
+# echo "[tunnel] downloading radeon-tunnel client from ${TUNNEL_SERVER}"
 curl --noproxy '*' -fsSL "${TUNNEL_SERVER}/client" -o "${TUNNEL_BIN}"
 chmod +x "${TUNNEL_BIN}"
 
@@ -71,7 +71,7 @@ else
   fi
 fi
 
-echo "[start] ComfyUI is running on http://127.0.0.1:${COMFY_PORT}"
+echo "[start] ComfyUI is running ..."
 echo "[start] Tunnel PID: $TUNNEL_PID"
 echo "[start] ComfyUI PID: $COMFY_PID"
 echo "[start] Logs: /tmp/comfyui.log (ComfyUI), /tmp/tunnel.log (Tunnel)"
